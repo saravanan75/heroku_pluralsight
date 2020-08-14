@@ -49,7 +49,11 @@ public class Main {
   }
 
   @RequestMapping("/")
-  String index() {
+  String index(Map<String, Object> model)
+  {
+    String env = System.getenv().get("ENVIRONMENT");
+    System.out.println("Env is "+env);
+    model.put("env", env);
     return "main";
   }
 
