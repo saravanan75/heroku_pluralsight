@@ -53,6 +53,7 @@ public class Main {
   {
     String env = System.getenv().get("ENVIRONMENT");
     System.out.println("Env is "+env);
+    System.out.println("Changed");
     model.put("env", env);
     return "main";
   }
